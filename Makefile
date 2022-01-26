@@ -1,0 +1,20 @@
+install:
+	poetry install
+
+brain-games:
+	poetry run brain-games
+
+build:
+	poetry build
+#сборка пакета
+
+publish:
+	poetry publish --dry-run
+#отладка пакета без публикации в каталог PyPI
+
+package-install:
+	python3 -m pip install --user dist/*.whl
+#установка пакета из ОС(корневая директория проекта)
+
+reinstall:
+	python3 -m pip install --user --force-reinstall dist/*.whl
