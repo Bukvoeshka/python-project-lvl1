@@ -16,6 +16,9 @@ package-install:
 	python3 -m pip install --user dist/*.whl
 #установка пакета из ОС(корневая директория проекта)
 
+uninstall:
+	pip uninstall hexlet_code
+
 reinstall:
 	python3 -m pip install --user --force-reinstall dist/*.whl
 
