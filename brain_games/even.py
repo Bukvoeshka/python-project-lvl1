@@ -19,13 +19,19 @@ def quest():
 
 
 def check_answer():
-    if number % 2 == 0 and answ == 'yes':
-        print('Correct!')
-    elif number % 2 == 0 and answ != 'yes':
-        print("'{}' is wrong answer ;(. Correct answer was 'yes'.".format(answ))
-        print("Let's try again, {}!".format(name))
-    elif number % 2 != 0 and answ == 'no':
-        print('Correct!')
-    elif number % 2 != 0 and answ != 'no':
-        print("'{}' is wrong answer ;(. Correct answer was 'no'.".format(answ))
-        print("Let's try again, {}!".format(name))
+    win_count = 0
+    while win_count < 3:
+        quest()
+        if number % 2 == 0 and answ == 'yes':
+            print('Correct!')
+            win_count += 1
+        elif number % 2 == 0 and answ != 'yes':
+            print("'{}' is wrong answer ;(. Correct answer was 'yes'.".format(answ))
+            print("Let's try again, {}!".format(name))
+        elif number % 2 != 0 and answ == 'no':
+            print('Correct!')
+            win_count += 1
+        elif number % 2 != 0 and answ != 'no':
+            print("'{}' is wrong answer ;(. Correct answer was 'no'.".format(answ))
+            print("Let's try again, {}!".format(name))
+    print('Congrulations, {}!'.format(name))
