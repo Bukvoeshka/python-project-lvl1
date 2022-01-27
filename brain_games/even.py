@@ -28,10 +28,13 @@ def check_answer():
         elif number % 2 == 0 and answ != 'yes':
             print("'{}' is wrong answer ;(. Correct answer was 'yes'.".format(answ))
             print("Let's try again, {}!".format(name))
+            break
         elif number % 2 != 0 and answ == 'no':
             print('Correct!')
             win_count += 1
         elif number % 2 != 0 and answ != 'no':
             print("'{}' is wrong answer ;(. Correct answer was 'no'.".format(answ))
             print("Let's try again, {}!".format(name))
-    print('Congrulations, {}!'.format(name))
+            break
+    if win_count == 3:
+        print('Congrulations, {}!'.format(name))
