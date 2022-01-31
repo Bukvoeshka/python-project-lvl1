@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from brain_games.even import welcome_user
 from brain_games.even import check_answer
 
@@ -7,7 +5,7 @@ from brain_games.even import check_answer
 def main():
     print('Welcome to the Brain Games!')
     welcome_user()
-    # quest()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     check_answer()
 
 
