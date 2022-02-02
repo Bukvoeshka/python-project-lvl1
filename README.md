@@ -6,3 +6,5 @@
 ![example workflow](https://github.com/Bukvoeshka/python-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 
 <a href="https://asciinema.org/a/PafJS82wlYbVaLAd9XL5RzbYd" target="_blank"><img src="https://asciinema.org/a/PafJS82wlYbVaLAd9XL5RzbYd.svg" /></a>
+
+<a href="https://asciinema.org/a/ntZEvpXgf515JijIfkesfwkfj" target="_blank"><img src="https://asciinema.org/a/ntZEvpXgf515JijIfkesfwkfj.svg" /></a>
