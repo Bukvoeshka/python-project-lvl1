@@ -44,4 +44,4 @@ def check_answer():
             print(f"Let's try again, {name}!")
             break
     if win_count == 3:
-        print(f'Congratulations, {name}')
+        print(f'Congratulations, {name}!')
