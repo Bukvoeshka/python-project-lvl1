@@ -17,7 +17,7 @@ def quest():
     number2 = random.randint(1, 100)
     operation = random.choice(['+', '-', '*'])
     question = f'{number1} {operation} {number2}'
-    print('Question: ', question)
+    print('Question:', question)
 
 
 def resl():
