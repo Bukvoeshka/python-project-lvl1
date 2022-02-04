@@ -7,18 +7,17 @@ def welcome_user():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
 
+
 # узнать насчёт способов облегчить функцию
 def quest():
     global number
     global number1
     global action
-    global answ
     number = random.randint(1, 100)
     number1 = random.randint(1, 100)
     action = random.choice(('+', '-', '*'))
     question = f'{number} {action} {number1}'
     print('Question: ', question)
-    answ = input('Your answer: ')
 
 
 def resl():
@@ -34,6 +33,7 @@ def check_answer():
     win_count = 0
     while win_count < 3:
         quest()
+        answ = input('Your answer: ')
         if answ == str(resl()):
             print('Correct!')
             win_count += 1

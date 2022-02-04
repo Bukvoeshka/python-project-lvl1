@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from brain_games.even import welcome_user
 from brain_games.even import check_answer
 
