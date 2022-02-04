@@ -13,7 +13,7 @@ def quest():
     global number2
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)
-    print('Question: ', number1, number2)
+    print('Question:', number1, number2)
 
 
 def gcd1():

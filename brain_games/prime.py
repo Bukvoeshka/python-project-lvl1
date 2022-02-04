@@ -11,7 +11,7 @@ def welcome_user():
 def quest():
     global number
     number = random.randint(1, 100)
-    print(f'Question: {number}')
+    print('Question:', number)
     global answ
     answ = input('Your answer: ')
 

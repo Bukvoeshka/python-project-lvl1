@@ -27,7 +27,7 @@ def middle():
     num = random.randint(1, 9)
     rand_element = progression[num]
     progression[num] = '..'
-    print('Question: ', ' '.join(map(str, progression)))
+    print('Question:', ' '.join(map(str, progression)))
 
 
 def check_answer():
