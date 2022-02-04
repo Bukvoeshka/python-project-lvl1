@@ -1,12 +1,8 @@
 install:
 	poetry install
 
-brain-even:
-	poetry run brain-even
-
 build:
 	poetry build
-#сборка пакета
 
 publish:
 	poetry publish --dry-run
