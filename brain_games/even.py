@@ -23,8 +23,12 @@ def check_answer():
         if number % 2 == 0 and answ == 'yes' or number % 2 != 0 and answ == 'no':
             print('Correct!')
             win_count += 1
-        elif number % 2 == 0 and answ != 'yes' or number % 2 != 0 and answ != 'no':
+        elif number % 2 == 0 and answ != 'yes':
             print(f"'{answ}' is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"Let's try again, {name}!")
+            break
+        elif number % 2 != 0 and answ != 'no':
+            print(f"'{answ}' is wrong answer ;(. Correct answer was 'no'.")
             print(f"Let's try again, {name}!")
             break
     if win_count == 3:
