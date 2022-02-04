@@ -10,23 +10,22 @@ def welcome_user():
 
 # узнать насчёт способов облегчить функцию
 def quest():
-    global number
     global number1
+    global number2
     global operation
-    number = random.randint(1, 100)
     number1 = random.randint(1, 100)
+    number2 = random.randint(1, 100)
     operation = random.choice(('+', '-', '*'))
-    # question = f'{number} {operation} {number1}'
-    print(f'Question: {number} {operation} {number1}')
+    print(f'Question: {number1} {operation} {number2}')
 
 
 def resl():
     if operation == '+':
-        return number + number1
+        return number1 + number2
     elif operation == '-':
-        return number - number1
+        return number1 - number2
     elif operation == '*':
-        return number * number1
+        return number1 * number2
 
 
 def check_answer():
