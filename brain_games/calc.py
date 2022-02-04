@@ -12,20 +12,20 @@ def welcome_user():
 def quest():
     global number
     global number1
-    global action
+    global operation
     number = random.randint(1, 100)
     number1 = random.randint(1, 100)
-    action = random.choice(('+', '-', '*'))
-    question = f'{number} {action} {number1}'
+    operation = random.choice(('+', '-', '*'))
+    question = f'{number} {operation} {number1}'
     print('Question: ', question)
 
 
 def resl():
-    if action == '+':
+    if operation == '+':
         return number + number1
-    elif action == '-':
+    elif operation == '-':
         return number - number1
-    elif action == '*':
+    elif operation == '*':
         return number * number1
 
 
