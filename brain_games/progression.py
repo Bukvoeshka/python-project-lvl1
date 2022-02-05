@@ -23,9 +23,9 @@ def start():
 
 
 def middle():
-    global rand_element
+    global rnd_elmnt
     num = random.randint(1, 9)
-    rand_element = progression[num]
+    rnd_elmnt = progression[num]
     progression[num] = '..'
     print('Question:', ' '.join(map(str, progression)))
 
@@ -36,12 +36,13 @@ def check_answer():
         start()
         middle()
         answ = input('Your answer: ')
-        if answ == str(rand_element):
+        if answ == str(rnd_elmnt):
             print('Correct!')
             win_count += 1
-        else:
-            print(f"'{answ}' is wrong answer ;(. Correct answer was '{rand_element}'.")
-            print(f"Let's try again, {name}!")
-            break
+            continue
+        # else:
+        print(f"'{answ}' is wrong answer ;(. Correct answer was '{rnd_elmnt}'.")
+        print(f"Let's try again, {name}!")
+        break
     if win_count == 3:
         print(f'Congratulations, {name}!')

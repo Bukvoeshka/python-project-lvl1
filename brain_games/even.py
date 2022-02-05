@@ -9,9 +9,9 @@ def welcome_user():
 
 
 def quest():
-    global number
-    number = random.randint(1, 100)
-    print('Question:', number)
+    global numb
+    numb = random.randint(1, 100)
+    print('Question:', numb)
     global answ
     answ = input('Your answer: ')
 
@@ -20,14 +20,14 @@ def check_answer():
     win_count = 0
     while win_count < 3:
         quest()
-        if number % 2 == 0 and answ == 'yes' or number % 2 != 0 and answ == 'no':
+        if numb % 2 == 0 and answ == 'yes' or numb % 2 != 0 and answ == 'no':
             print('Correct!')
             win_count += 1
-        elif number % 2 == 0 and answ != 'yes':
+        elif numb % 2 == 0 and answ != 'yes':
             print(f"'{answ}' is wrong answer ;(. Correct answer was 'yes'.")
             print(f"Let's try again, {name}!")
             break
-        elif number % 2 != 0 and answ != 'no':
+        elif numb % 2 != 0 and answ != 'no':
             print(f"'{answ}' is wrong answer ;(. Correct answer was 'no'.")
             print(f"Let's try again, {name}!")
             break

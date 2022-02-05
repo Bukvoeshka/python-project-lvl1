@@ -44,7 +44,12 @@ def gcd2():
 
 def intersection():
     global store
-    target, iterate = [divider1, divider2] if len(divider2) >= len(divider1) else [divider2, divider1]
+    # target, iterate = [divider1, divider2]
+    # if len(divider2) >= len(divider1) else [divider2, divider1]
+    if len(divider2) >= len(divider1):
+        target, iterate = [divider1, divider2]
+    else:
+        target, iterate = [divider2, divider1]
     i = 0
     store = []
     while i < len(iterate):
@@ -58,18 +63,18 @@ def intersection():
 
 def gcd():
     global store
-    global resultat
-    resultat = 1
+    global rslt
+    rslt = 1
     if store == []:
         return 1
     else:
         for i in store:
-            resultat *= i
-        return resultat
+            rslt *= i
+        return rslt
 
 
 def check_answer():
-    global resultat
+    global rslt
     win_count = 0
     while win_count < 3:
         quest()
@@ -78,11 +83,11 @@ def check_answer():
         intersection()
         gcd()
         answ = input('Your answer: ')
-        if answ == str(resultat):
+        if answ == str(rslt):
             print('Correct!')
             win_count += 1
         else:
-            print(f"'{answ}' is wrong answer ;(. Correct answer was '{resultat}'.")
+            print(f"'{answ}' is wrong answer ;(. Correct answer was '{rslt}'.")
             print(f"Let's try again, {name}!")
             break
     if win_count == 3:

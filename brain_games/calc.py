@@ -37,9 +37,11 @@ def check_answer():
         if answ == str(resl()):
             print('Correct!')
             win_count += 1
-        else:
-            print(f"'{answ}' is wrong answer ;(. Correct answer was '{str(resl())}'.")
-            print(f"Let's try again, {name}!")
-            break
+            continue
+        # else:
+        rght_answ = str(resl())
+        print(f"'{answ}' is wrong answer ;(. Correct answer was '{rght_answ}'.")
+        print(f"Let's try again, {name}!")
+        break
     if win_count == 3:
         print(f'Congratulations, {name}!')
